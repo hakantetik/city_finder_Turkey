@@ -24,7 +24,7 @@ while len(guessed_cities) < 81:
             # noinspection PyTypeChecker
             df.to_csv("missed_cities")
         break
-    if answer in all_cities:
+    if answer in all_cities and answer not in guessed_cities:
         answer_city = data[data.iller == answer]
         text = turtle.Turtle()
         text.penup()
@@ -32,3 +32,4 @@ while len(guessed_cities) < 81:
         text.goto(int(answer_city.x), int(answer_city.y))
         text.write(answer, font=("Arial", 12, "normal"))
         guessed_cities.append(answer)
+

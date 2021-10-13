@@ -32,4 +32,3 @@ while len(guessed_cities) < 81:
         text.goto(int(answer_city.x), int(answer_city.y))
         text.write(answer, font=("Arial", 12, "normal"))
         guessed_cities.append(answer)
-
